@@ -1,5 +1,9 @@
 # MMML-project: The "Teacher-Student" Gap in Foundation Vision Models
 
+**Authors:** Vika Koval, Danylo Tsymbal
+>
+**Course:** Mathematical Methods of Machine Learning (April 2026)
+
 ---
 
 ## Overview
@@ -14,9 +18,9 @@ We train two student models (identical ViT-S/14 architectures) under **Forward-K
 
 | Hypothesis | Prediction | Result |
 |---|---|---|
-| **H1** (Entropy Gap) | Forward-KL - diffuse maps, Reverse-KL - sharp maps | Confirmed (ΔH̄ = +0.1643 vs −0.1182) |
+| **H1** (Entropy Gap) | Forward-KL — diffuse maps, Reverse-KL — sharp maps | Confirmed (ΔH̄ = +0.1643 vs −0.1182) |
 | **H2** (Geometric Fidelity) | Sharpness ≠ higher cosine similarity to teacher | Confirmed (FKL: 0.9051 vs RKL: 0.8734) |
-| **H3** (Mode Collapse) | Reverse-KL - higher attention collapse rate | Confirmed (0.0531 vs 0.0082) |
+| **H3** (Mode Collapse) | Reverse-KL — higher attention collapse rate | Confirmed (0.0531 vs 0.0082) |
 | **H4** (Causal Attribution) | Entropy gap is caused by loss geometry, not capacity | Confirmed (identical architectures) |
 
 ---
@@ -58,4 +62,10 @@ Both students are initialised from a deep copy of the pretrained teacher weights
 | Student (Forward KL) | H̄_T + 0.1643 | +0.1643 | 0.9051 | 0.0082 | 0.6942 |
 | Student (Reverse KL) | H̄_T − 0.1182 | −0.1182 | 0.8734 | 0.0531 | 0.6687 |
 
-More details in `project.pdf`
+---
+
+## Full Report
+
+For the complete write-up including proofs, algorithm pseudocode, and extended discussion, see the full report on Overleaf:
+
+**[View full report](https://www.overleaf.com/read/jfwzjbzkrjyg#e19dba)**
