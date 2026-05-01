@@ -40,7 +40,7 @@ We train two student models (identical ViT-S/14 architectures) under **Forward-K
 | Student architectures | ViT-S/14 × 2 (identical to teacher) |
 | Dataset | STL-10 (N=2,000 balanced subset) |
 | Training steps | 3,500 |
-| Optimizer | AdamW (lr=3×10⁻⁴, weight decay=10⁻⁴) |
+| Optimizer | AdamW (lr=3×10⁻⁴) |
 | Scheduler | Cosine annealing |
 | Batch size | 16 |
 | Temperature τ | 3.0 |
